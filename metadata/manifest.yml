@@ -8,7 +8,7 @@ Versions:
 License: "None"
 Vendor: Me
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: MeToo
+Cartridge-Vendor: metoo
 Categories:
  - service
  - web_framework
