@@ -20,7 +20,7 @@ Cart-Data:
    Description: An example environment variable using ERB processing
 Group-Overrides:
  - components:
-  - httpd
+   - httpd
 Subscribes:
   set-db-connection-info:
    Type: "NET_TCP:db:connection-info"
