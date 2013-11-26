@@ -1,8 +1,8 @@
 Name: ofct
 Cartridge-Short-Name: HTTPD
 Display-Name: HTTPD Cartridge 0.1
-Description: A htt[d cartridge for development use only.
 Source-Url: https://github.com/lukeyuan/ofct.git
+Description: A htt[d cartridge for development use only.
 Version: '0.1'
 Versions:
  - '0.1'
