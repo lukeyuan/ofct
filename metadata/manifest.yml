@@ -1,35 +1,38 @@
 Name: ofct
 Cartridge-Short-Name: HTTPD
-Display-Name: My Cartridge test
+Display-Name: HTTPD Cartridge 0.1
 Source-Url: https://github.com/lukeyuan/ofct.git
-Description: A httpd cartridge for development use only.
+Description: A htt[d cartridge for development use only.
 Version: '0.1'
+Versions:
+- '0.1'
 License: "None"
-Vendor: Custom Cartridges INC
+Vendor: Me
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: customcarts
+Cartridge-Vendor: metoo
 Categories:
-  - service
-  - web_framework
+- service
+- web_framework
 Provides:
-  - httpd
+- httpd
 Cart-Data:
-  - Key: OPENSHIFT_MOCK_EXAMPLE
-    Type: environment
-    Description: "An example environment variable using ERB processing"
+- Key: OPENSHIFT_MOCK_EXAMPLE
+  Type: environment
+  Description: An example environment variable using ERB processing
 Group-Overrides:
-  - components:
-    - httpd
+- components:
+ - httpd
 Subscribes:
   set-db-connection-info:
-    Type: "NET_TCP:db:connection-info"
-    Required: false
+   Type: "NET_TCP:db:connection-info"
+   Required: false
 Endpoints:
-  - Private-IP-Name:   IP
-    Private-Port-Name: PORT
-    Private-Port:      8080
-    Public-Port-Name:  PROXY_PORT
-    Mappings:
-      - Frontend:      ""
-        Backend:       ""
-        Options:       { websockets: false }
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+  Protocols: [http, ws]
+  Mappings:
+  - Frontend: ""
+    Backend: ""
+    Options: { websocket: false }  
