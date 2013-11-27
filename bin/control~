@@ -1,7 +1,6 @@
 #!/bin/bash -eu
 
 PATH=/bin/:/usr/bin:$PATH
-export $PATH
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 function start {
