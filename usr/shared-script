@@ -1,2 +1,2 @@
-#/bin/bash -eu
+#/bin/env sh
 echo "This is a shared script"

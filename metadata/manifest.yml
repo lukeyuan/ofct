@@ -1,38 +1,47 @@
 Name: ofct
 Cartridge-Short-Name: HTTPD
+<<<<<<< HEAD
 Display-Name: My Cartridge test
 Source-Url: https://github.com/lukeyuan/ofct.git
 Description: A httpd cartridge for development use only.
+=======
+Display-Name: HTTPD Cartridge
+Source-Url: https://github.com/lukeyuan/ofct.git
+Description: "A httpd cartridge for development use only."
+>>>>>>> d8c964a96cfcab620b9b0f85fade9597d853cab7
 Version: '0.1'
-Versions:
- - '0.1'
 License: "None"
-Vendor: Me
+Vendor: Custom Cartridges INC
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: metoo
+Cartridge-Vendor: customcarts
 Categories:
- - service
- - web_framework
+  - service
+  - web_framework
 Provides:
- - httpd
+  - httpd
 Cart-Data:
+<<<<<<< HEAD
  - Key: OPENSHIFT_HTTPD_EXAMPLE
    Type: environment
    Description: An example environment variable using ERB processing
+=======
+  - Key: OPENSHIFT_HTTPD_EXAMPLE
+    Type: environment
+    Description: "An example environment variable using ERB processing"
+>>>>>>> d8c964a96cfcab620b9b0f85fade9597d853cab7
 Group-Overrides:
- - components:
-   - httpd
+  - components:
+    - httpd
 Subscribes:
   set-db-connection-info:
-   Type: "NET_TCP:db:connection-info"
-   Required: false
+    Type: "NET_TCP:db:connection-info"
+    Required: false
 Endpoints:
- - Private-IP-Name: IP
-   Private-Port-Name: PORT
-   Private-Port: 8080
-   Public-Port-Name: PROXY_PORT
-   Protocols: [http, ws]
-   Mappings:
-   - Frontend: ""
-     Backend: ""
-     Options: { websocket: false }  
+  - Private-IP-Name:   IP
+    Private-Port-Name: PORT
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_PORT
+    Mappings:
+      - Frontend:      ""
+        Backend:       ""
+        Options:       { websockets: false }
